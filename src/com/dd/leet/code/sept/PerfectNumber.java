@@ -15,7 +15,7 @@ public class PerfectNumber {
 
     private static void doPerfectNumber(int items) {
         for (int i = 0; i < items; i++) {
-            if (checkIsPerpectNo(i)) {
+            if (checkIsPerfectNo(i)) {
                 System.out.print(i + " ");
             }
         }
@@ -34,10 +34,10 @@ Test Case : I
  sum = 6
  Itr 4 i == 5  : 6/5 != 0
  sum = 6
- Itr 5 i = 6 6<6 terninate the loop.
+ Itr 5 i = 6 6<6 terminate the loop.
  sum == num i.e 6 == 6.
  */
-    private static boolean checkIsPerpectNo(int num) {
+    private static boolean checkIsPerfectNo(int num) {
         int sum = 1;
         for (int i = 2; i < num; i++) {
             if (num % i == 0) {
