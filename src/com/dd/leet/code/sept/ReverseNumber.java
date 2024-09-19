@@ -8,8 +8,12 @@ public class ReverseNumber {
         System.out.println("Enter the number to reverse:");
         Scanner scanner = new Scanner(System.in);
         int number = scanner.nextInt();
-        int reversNum = 0;
+        int reversNum = reverseNumber(number);
+        System.out.println("Reverse of Num " + number + " is -> " + reversNum);
+    }
 
+    public static int reverseNumber(int number) {
+        int reversNum = 0;
         /**
          * Test Case I : number is 143.
          * itr 1: 143 > 0 : true,digit = 143 % 10 = 3, number = 143/10 (14.3) which both are int so 14 ,reversNum = 0*10+3 = 3.
@@ -22,8 +26,8 @@ public class ReverseNumber {
             number /= 10;
             reversNum = reversNum * 10 + digit;
         }
-        System.out.println("Reverse of Num " + number + " is -> " + reversNum);
-    }
+        return reversNum;
 
+    }
 
 }

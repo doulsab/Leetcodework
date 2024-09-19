@@ -7,6 +7,11 @@ public class ReverseString {
         System.out.println("Enter the string to reverse :");
         Scanner scanner = new Scanner(System.in);
         String enterString = scanner.nextLine();
+        String reverseOfString = reverseAString(enterString);
+        System.out.println("Reverse of entered string :" + enterString + " is -> " + reverseOfString);
+    }
+
+    public static String reverseAString(String enterString) {
         StringBuilder stb = new StringBuilder();
         /**
          * Test case I :
@@ -20,12 +25,10 @@ public class ReverseString {
          *  Itr : i = 0 which is > or = 0 true char index is 'c' stb is "redoc".
          *  Itr : i = -1 which is < 0 false loop will terminate.
          */
-        for (int i = enterString.length()-1; i >=0; i--) {
+        for (int i = enterString.length() - 1; i >= 0; i--) {
             char charIs = enterString.charAt(i);
             stb.append(charIs);
         }
-        System.out.println("Reverse of entered string :" + enterString + " is -> " + stb);
-
-
+        return stb.toString();
     }
 }
